@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.util.Log;
@@ -21,6 +22,9 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -35,9 +39,11 @@ public class SecondFragment extends Fragment implements OnMapReadyCallback {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
     private RecyclerView mRecyclerView;
-    private StaggeredGridLayoutManager mStaggeredLayoutManager;
+    private LinearLayoutManager mLinearLayoutManager;
 
     private GoogleMap map;
+
+    private List<Location> locations;
 
     private String mParam1;
     private String mParam2;
@@ -101,8 +107,17 @@ public class SecondFragment extends Fragment implements OnMapReadyCallback {
         Log.d("bbike fm", "onActivityCreated " + mapFragment);
 
         mRecyclerView = (RecyclerView) getActivity().findViewById(R.id.list);
-        mStaggeredLayoutManager = new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL);
-        mRecyclerView.setLayoutManager(mStaggeredLayoutManager);
+        mLinearLayoutManager = new LinearLayoutManager(getContext());
+        mRecyclerView.setLayoutManager(mLinearLayoutManager);
+
+        locations = new ArrayList<>();
+        locations.add(new Location(1, "Tuan", "175 Vo Thi Sau", 7.5, 10));
+        locations.add(new Location(1, "Tuan1", "175 Vo Thi Sau", 7.5, 10));
+        locations.add(new Location(1, "Tuan2", "175 Vo Thi Sau", 7.5, 10));
+
+        //just test
+        RVAdapter mRVadapter = new RVAdapter(locations);
+        mRecyclerView.setAdapter(mRVadapter);
     }
 
     @Override
