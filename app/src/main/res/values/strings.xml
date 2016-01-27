@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">BBike</string>
+    <string name="action_settings">Cài đặt</string>
+    <string name="title_activity_login">Đăng nhập</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password"> Mật khẩu</string>
+    <string name="action_sign_in">Đăng nhập</string>
+    <string name="action_sign_in_short">Đăng nhập</string>
+    <string name="action_sign_up">Đăng kí</string>
+    <string name="re_prompt_password">Nhập lại mật khẩu</string>
+    <string name="account_name">Tên hiển thị</string>
+    <string name="error_invalid_email">Email không hợp lệ</string>
+    <string name="error_invalid_password">Xác nhận mật khẩu không chính xác</string>
+    <string name="error_incorrect_password">Mật khẩu không chính xác</string>
+    <string name="login_fail">Sai email hoặc mật khẩu không chính xác</string>
+    <string name="register_fail">Đăng ký không thành công</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
