@@ -20,11 +20,13 @@ public class Location {
     public double latitude;
     public double longitude;
 
-    Location(int id, String name, String address, double rate, int likeNum) {
+    Location(int id, String name, String address, double rate, int likeNum, double latitude, double longitude) {
         this.id = id;
         this.name = name;
         this.address = address;
         this.rate = rate;
         this.likeNum = likeNum;
+        this.latitude = latitude;
+        this.longitude = longitude;
     }
 }

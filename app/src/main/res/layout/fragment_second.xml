@@ -27,6 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="3"
+            android:id="@+id/search_bar"
             android:gravity="center_vertical|center_horizontal">
         </SearchView>
     </LinearLayout>
@@ -49,6 +50,6 @@
             android:id="@+id/list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@android:color/darker_gray"/>
+            android:background="#ECEDF0"/>
     </LinearLayout>
 </LinearLayout>
